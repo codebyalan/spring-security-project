@@ -36,3 +36,6 @@ build/
 mvnw.cmd
 mvnw
 .gitattributes
+/oauth-server/src/main/java/com/ambro/oauth/server/config/CustomAuthenticationProvider.java
+/oauth-server/src/main/java/com/ambro/oauth/server/config/CustomAuthorizationGrantAuthenticationToken.java
+/oauth-server/src/main/java/com/ambro/oauth/server/config/CustomCodeGrantAuthenticationConverter.java
