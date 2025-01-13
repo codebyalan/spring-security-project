@@ -1,0 +1,23 @@
+server:
+  port: 7030
+
+spring:
+  application:
+    name: resource-server
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9000
+#        opaquetoken:
+#          introspection-uri: https://my-auth-server.com/oauth2/introspect
+#          client-id: client
+#          client-secret: secret
+
+#  security:
+#    oauth2:
+#      resourceserver:
+        opaquetoken:
+          introspection-uri: http://localhost:9000/oauth2/introspect
+          client-id: client
+          client-secret: secret

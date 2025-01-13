@@ -1,4 +1,4 @@
-package com.ambro.security.auth.server;
+package com.ambro.resource.server.auth.server;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

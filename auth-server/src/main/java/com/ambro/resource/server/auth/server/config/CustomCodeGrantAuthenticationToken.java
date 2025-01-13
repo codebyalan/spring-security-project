@@ -1,4 +1,4 @@
-package com.ambro.security.auth.server.config;
+package com.ambro.resource.server.auth.server.config;
 
 import java.util.Map;
 import java.util.Set;
@@ -40,7 +40,7 @@ public class CustomCodeGrantAuthenticationToken extends OAuth2AuthorizationGrant
     }
 
     public Set<String> getScope() {
-        return StringUtils.commaDelimitedListToSet(scope.replace(" ", ""));
+        return StringUtils.commaDelimitedListToSet(scope.replace(" ", ","));
     }
 
 }

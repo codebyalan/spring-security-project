@@ -1,4 +1,4 @@
-package com.ambro.security.auth.server.config;
+package com.ambro.resource.server.auth.server.config;
 
 
 import java.nio.charset.StandardCharsets;
@@ -100,7 +100,9 @@ public class CustomCodeGrantAuthenticationProvider implements AuthenticationProv
         }
         authorizedScopes.forEach(scope -> {
             if (!registeredClient.getScopes().contains(scope)) {
+                System.out.println(scope);
                 throw new OAuth2AuthenticationException(OAuth2ErrorCodes.INVALID_SCOPE);
+
             }
         });
         Authentication usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(user, null,

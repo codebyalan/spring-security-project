@@ -1,4 +1,4 @@
-package com.ambro.security.auth.server;
+package com.ambro.resource.server.auth.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,5 +9,4 @@ public class AuthServerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(AuthServerApplication.class, args);
 	}
-
 }

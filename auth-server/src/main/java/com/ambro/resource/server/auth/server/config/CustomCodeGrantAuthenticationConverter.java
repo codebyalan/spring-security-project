@@ -1,4 +1,4 @@
-package com.ambro.security.auth.server.config;
+package com.ambro.resource.server.auth.server.config;
 
 
 import java.util.HashMap;
@@ -21,7 +21,7 @@ public class CustomCodeGrantAuthenticationConverter implements AuthenticationCon
     public Authentication convert(HttpServletRequest request) {
 
         String grantType = request.getParameter(OAuth2ParameterNames.GRANT_TYPE);
-        if (!"upassword".equals(grantType)) {
+        if (!"custom_password".equals(grantType)) {
             return null;
         }
         Authentication clientPrincipal = SecurityContextHolder.getContext().getAuthentication();
@@ -31,6 +31,7 @@ public class CustomCodeGrantAuthenticationConverter implements AuthenticationCon
             if (!key.equals(OAuth2ParameterNames.GRANT_TYPE) &&
                     !key.equals(OAuth2ParameterNames.CLIENT_ID)
             ) {
+                System.out.println(value.get(0));
                 additionalParameters.put(key, value.get(0));
             }
         });
